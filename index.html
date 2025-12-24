@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Smart Student Task Planner</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <header>
+      <h1>📘 Study Planner</h1>
+      <button id="themeToggle">🌙</button>
+    </header>
+
+    <!-- Task Form -->
+    <form id="taskForm">
+      <input type="text" id="taskInput" placeholder="Enter task..." required />
+      <select id="priority">
+        <option value="High">High</option>
+        <option value="Medium">Medium</option>
+        <option value="Low">Low</option>
+      </select>
+      <button type="submit">Add</button>
+    </form>
+
+    <!-- Filters -->
+    <div class="filters">
+      <button onclick="filterTasks('all')">All</button>
+      <button onclick="filterTasks('pending')">Pending</button>
+      <button onclick="filterTasks('completed')">Completed</button>
+    </div>
+
+    <!-- Progress -->
+    <div class="progress-container">
+      <div id="progressBar"></div>
+    </div>
+
+    <!-- Task List -->
+    <ul id="taskList"></ul>
+
+    <!-- Pomodoro -->
+    <div class="pomodoro">
+      <h3>⏱ Pomodoro Timer</h3>
+      <p id="timer">25:00</p>
+      <button onclick="startTimer()">Start</button>
+      <button onclick="resetTimer()">Reset</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
