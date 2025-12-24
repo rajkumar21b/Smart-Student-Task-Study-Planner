@@ -1,0 +1,83 @@
+:root {
+  --bg: #f4f6f8;
+  --text: #222;
+  --card: #fff;
+}
+
+.dark {
+  --bg: #121212;
+  --text: #fff;
+  --card: #1e1e1e;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+}
+
+.app {
+  width: 400px;
+  background: var(--card);
+  padding: 20px;
+  margin-top: 40px;
+  border-radius: 10px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+form {
+  display: flex;
+  gap: 10px;
+  margin: 15px 0;
+}
+
+input, select, button {
+  padding: 8px;
+}
+
+.filters button {
+  margin-right: 5px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  margin: 8px 0;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: gray;
+}
+
+.progress-container {
+  width: 100%;
+  height: 10px;
+  background: #ddd;
+  border-radius: 5px;
+  margin: 10px 0;
+}
+
+#progressBar {
+  height: 100%;
+  width: 0%;
+  background: green;
+  border-radius: 5px;
+}
+
+.pomodoro {
+  text-align: center;
+  margin-top: 20px;
+}
