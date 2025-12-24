@@ -99,9 +99,29 @@ function updateTimer() {
 }
 
 /* ---------- THEME ---------- */
-document.getElementById("themeToggle").onclick = () => {
+const themeToggle = document.getElementById("themeToggle");
+
+// Load saved theme
+if (localStorage.getItem("theme") === "dark") {
+  document.body.classList.add("dark");
+  themeToggle.textContent = "☀️"; // Sun for light mode switch
+} else {
+  themeToggle.textContent = "🌙"; // Moon for dark mode switch
+}
+
+// Toggle theme
+themeToggle.onclick = () => {
   document.body.classList.toggle("dark");
+
+  if (document.body.classList.contains("dark")) {
+    themeToggle.textContent = "🌙"; // show sun when dark
+    localStorage.setItem("theme", "dark");
+  } else {
+    themeToggle.textContent = "☀️"; // show moon when light
+    localStorage.setItem("theme", "light");
+  }
 };
+
 
 /* ---------- INIT ---------- */
 document.getElementById("taskForm").addEventListener("submit", addTask);
